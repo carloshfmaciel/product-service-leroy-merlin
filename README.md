@@ -180,12 +180,14 @@ Atenção: Importante que os dados estejam conforme imagem abaixo:<br>
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_24.PNG)
 
-
+1 - Ao lado esquerdo temos duas tabelas(PRODUCT e PRODUCT_IMPORT_SHEET_LOG). 
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_25.PNG)
 
-
+2 - Para visualizar o conteúdo da tabela ***PRODUCT***, basta clicar sobre a mesma e clicar no botão ***Run***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_26.PNG)
+
+3 - Para visualizar o conteúdo da tabela ***PRODUCT_IMPORT_SHEET_LOG***, basta clicar sobre a mesma e clicar no botão ***Run***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_27.PNG)
