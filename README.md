@@ -1,4 +1,4 @@
-# Exemplo de Aplicação - Teste Java - Leroy Merlin
+# Exemplo de Aplicação - Leroy Merlin
 
 Autor: Carlos Maciel<br>
 Email: carloshfmaciel@gmail.com<br>
