@@ -72,19 +72,29 @@ http://localhost:8080/swagger-ui.html
 
 # Consultando o log de processamento da planilhada
 
+1 - Expando o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_04.PNG)
 
+2 - Informe o id do processamento e clique no botão ***Executar***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_05.PNG)
+
+3 - A API retornará os dados de log de processamento da plabilha.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_06.PNG)
 
 # Consultando todos os produtos cadastrados
 
+1 - Expando o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_07.PNG)
+
+2 - A consulta de todos os produtos é paginada e poderá ser informada o número da página e o tamanho da página. Caso não seja informado nenhum valor, a API assumirá o valor default(pageNumber = 0 e pageSize = 25). 
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_09.PNG)
 
-![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_10.PNG)
+3 - A API retornará uma lista de todos os produtos cadastrados.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_10.PNG)
 
