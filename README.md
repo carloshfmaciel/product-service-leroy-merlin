@@ -58,7 +58,7 @@ http://localhost:8080/swagger-ui.html
 
 # Importando a planilha de Produtos
 
-1 - Expando o endpoint abaixo e clique no ***Try it out***
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_01.PNG)
 
@@ -72,7 +72,7 @@ http://localhost:8080/swagger-ui.html
 
 # Consultando o log de processamento da planilhada
 
-1 - Expando o endpoint abaixo e clique no ***Try it out***
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_04.PNG)
 
@@ -86,7 +86,7 @@ http://localhost:8080/swagger-ui.html
 
 # Consultando todos os produtos cadastrados
 
-1 - Expando o endpoint abaixo e clique no ***Try it out***
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_07.PNG)
 
@@ -100,41 +100,91 @@ http://localhost:8080/swagger-ui.html
 
 # Consultando produto pelo id
 
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_11.PNG)
 
+2 - Informe o id do produto á consultar.
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_12.PNG)
+
+3 - A API retornará os dados do produto.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_13.PNG)
 
 # Atualizando produto
 
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_14.PNG)
+
+2 - Será exibido um modelo de requisição com os campos do produto.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_15.PNG)
 
+3 - Sobrescreva os dados do corpo, com os dados abaixo:
+
+```json
+{
+  "id": 2,
+  "productCode": 1001,
+  "productName": "Furadeira X",
+  "freeShipping": false,
+  "productDesc": "Furadeira eficiente X",
+  "productPrice": 100,
+  "categoryId": 123123
+}
+```
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_16.PNG)
+
+4 - Atualize algum dados clique no botão ***Executar***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_17.PNG)
 
+5 - Caso a atualização ocorra com sucesso, a API retornará HTTP Status 200
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_18.PNG)
+
+6 - Consultando agora o mesmo produto pela API de consulta pelo id, constatamos que os dados foram atualizados.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_19.PNG)
 
 # Deletando produto
 
+1 - Expanda o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_20.PNG)
+
+2 - Informe o id do produto á ser excluído e clique em ***Executar***
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_21.PNG)
 
+3 - Caso a deleção ocorra com sucesso, a API retornará HTTP Status 200.
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_22.PNG)
+
+4 - Consultando agora o mesmo produto pela API de consulta pelo id, constatamos que o mesmo não existe mais. A API retorna o HTTP Status 404.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_23.PNG)
 
 # Acessando o banco de dados
 
+Caso queira visualizar os dados gravados no banco de dados H2, basta acessar a URL e clicar em Connect:
+
+http://localhost:8080/h2/
+
+Atenção: Importante que os dados estejam conforme imagem abaixo:<br>
+***URL***: jdbc:h2:mem:testdb<br>
+***User Name***: sa<br>
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_24.PNG)
 
+
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_25.PNG)
+
+
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_26.PNG)
 
