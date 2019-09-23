@@ -51,7 +51,7 @@ public class ProductController {
 
 	@GetMapping(path = "/products/sheets/status/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity getImportSheetStatus(@PathVariable("id") Long importProcessId) {
-		ProductImportSheetLogORM log = productImportSheetLogService.getById(importProcessId);
+		ProductImportSheetLogORM log = productImportSheetLogService.getLogById(importProcessId);
 		return ResponseEntity.ok(log);
 	}
 

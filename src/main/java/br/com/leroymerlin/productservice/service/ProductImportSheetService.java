@@ -1,19 +1,17 @@
 package br.com.leroymerlin.productservice.service;
 
-import java.io.File;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import br.com.leroymerlin.productservice.constant.Messages;
 import br.com.leroymerlin.productservice.jms.message.ProductImportSheetMessage;
+import br.com.leroymerlin.productservice.jms.message.builder.ProductImportSheetMessageBuilder;
 import br.com.leroymerlin.productservice.jms.producer.ProductJmsProducer;
 import br.com.leroymerlin.productservice.orm.ProductImportSheetLogORM;
 import br.com.leroymerlin.productservice.orm.ProductORM;
@@ -33,6 +31,9 @@ public class ProductImportSheetService {
 	private ProductImportSheetLogService productImportSheetLogService;
 
 	@Autowired
+	private ProductImportSheetMessageBuilder productImportMessageBuilder;
+
+	@Autowired
 	private ProductRepository productRepository;
 
 	@Autowired
@@ -40,16 +41,13 @@ public class ProductImportSheetService {
 
 	public ProductImportSheetResponse importSheet(MultipartFile file) throws IOException {
 
-		ProductImportSheetLogORM productImportSheetLogORMSaved = productImportSheetLogService.create(file);
+		ProductImportSheetLogORM productImportSheetLogORM = productImportSheetLogService.createLog(file);
 
-		ProductImportSheetMessage message = new ProductImportSheetMessage();
-		message.setFileName(file.getOriginalFilename());
-		message.setFileContent(file.getBytes());
-		message.setProcessId(productImportSheetLogORMSaved.getId());
+		ProductImportSheetMessage message = productImportMessageBuilder.build(file, productImportSheetLogORM);
 
 		productJmsProducer.sendMessage(message);
 
-		ProductImportSheetResponse response = new ProductImportSheetResponse(productImportSheetLogORMSaved.getId(),
+		ProductImportSheetResponse response = new ProductImportSheetResponse(productImportSheetLogORM.getId(),
 				Messages.IMPORT_SHEET_SUCCESS);
 
 		return response;
@@ -59,12 +57,9 @@ public class ProductImportSheetService {
 
 		try {
 
-			productImportSheetLogService.updateStatusInProcessing(message.getProcessId());
+			productImportSheetLogService.updateLogStatusInProcessing(message.getProcessId());
 
-			File sheetFile = new File("product.xlsx");
-			FileUtils.writeByteArrayToFile(sheetFile, message.getFileContent());
-
-			List<ProductORM> products = productSheetUtils.extractProducts(sheetFile);
+			List<ProductORM> products = productSheetUtils.extractProducts(new ByteArrayInputStream(message.getFileContent()));
 
 			List<String> errors = new ArrayList<String>();
 
@@ -77,13 +72,13 @@ public class ProductImportSheetService {
 			});
 
 			if (!errors.isEmpty()) {
-				productImportSheetLogService.updateStatusError(message.getProcessId(), errors.toString());
+				productImportSheetLogService.updateLogStatusError(message.getProcessId(), errors.toString());
 			} else {
-				productImportSheetLogService.updateStatusSuccess(message.getProcessId());
+				productImportSheetLogService.updateLogStatusSuccess(message.getProcessId());
 			}
 
 		} catch (Exception e) {
-			productImportSheetLogService.updateStatusError(message.getProcessId(), e.getMessage());
+			productImportSheetLogService.updateLogStatusError(message.getProcessId(), e.getMessage());
 			logger.error(e.getMessage(), e);
 		}
 

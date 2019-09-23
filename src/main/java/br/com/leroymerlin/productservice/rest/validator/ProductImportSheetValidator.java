@@ -10,12 +10,16 @@ public class ProductImportSheetValidator {
 
 	public void validate(MultipartFile file) {
 		
-		if(file.isEmpty()) {
-			throw new IllegalArgumentException("Arquivo inválido!");
-		}
+		validateFileIsEmpty(file);
 		
 		validateMimeType(file);
 		
+	}
+	
+	public void validateFileIsEmpty(MultipartFile file) {
+		if(file.isEmpty()) {
+			throw new IllegalArgumentException("Arquivo inválido!");
+		}
 	}
 	
 	public void validateMimeType(MultipartFile file) {

@@ -48,6 +48,16 @@ public class ProductORM implements Serializable {
 	@Column(name = "CATEGORY_ID", nullable = false)
 	private Long categoryId;
 
+	public ProductORM() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ProductORM(Long id) {
+		super();
+		this.id = id;
+	}
+
 	public Long getId() {
 		return id;
 	}

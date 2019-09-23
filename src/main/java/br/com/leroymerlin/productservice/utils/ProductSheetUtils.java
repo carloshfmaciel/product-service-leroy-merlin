@@ -1,12 +1,11 @@
 package br.com.leroymerlin.productservice.utils;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -21,9 +20,9 @@ import br.com.leroymerlin.productservice.orm.ProductORM;
 public class ProductSheetUtils {
 
 	@SuppressWarnings("resource")
-	public List<ProductORM> extractProducts(File sheetFile) throws InvalidFormatException, IOException {
+	public List<ProductORM> extractProducts(InputStream sheetFileInpuStream) throws IOException {
 
-		Workbook workbook = new XSSFWorkbook(sheetFile);
+		Workbook workbook = new XSSFWorkbook(sheetFileInpuStream);
 		Sheet sheet = workbook.getSheetAt(0);
 
 		Row firstRow = sheet.getRow(0);
@@ -34,7 +33,7 @@ public class ProductSheetUtils {
 		List<ProductORM> products = new ArrayList<ProductORM>();
 
 		Row row = null;
-		for (int rowIndex = 3; rowIndex < sheet.getLastRowNum(); rowIndex++) {
+		for (int rowIndex = 3; rowIndex <= sheet.getLastRowNum(); rowIndex++) {
 			row = sheet.getRow(rowIndex);
 
 			ProductORM productORM = new ProductORM();

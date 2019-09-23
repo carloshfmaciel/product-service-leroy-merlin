@@ -20,21 +20,21 @@ public class ProductImportSheetLogService {
 	@Autowired
 	private ProductImportSheetLogRepository productImportSheetLogRepository;
 
-	public ProductImportSheetLogORM create(MultipartFile file) {
+	public ProductImportSheetLogORM createLog(MultipartFile file) {
 		ProductImportSheetLogORM productImportSheetLogORM = productImportSheetBuilder.build(file);
 		productImportSheetLogORM = productImportSheetLogRepository.save(productImportSheetLogORM);
 
 		return productImportSheetLogORM;
 	}
 
-	public void updateStatusInProcessing(Long processId) {
+	public void updateLogStatusInProcessing(Long processId) {
 		Optional<ProductImportSheetLogORM> optional = productImportSheetLogRepository.findById(processId);
 		ProductImportSheetLogORM productImportSheetLogORM = optional.get();
 		productImportSheetLogORM.setStatus(ProductSheetProcessStatus.PROCESSING);
 		productImportSheetLogRepository.save(productImportSheetLogORM);
 	}
 	
-	public void updateStatusSuccess(Long processId) {
+	public void updateLogStatusSuccess(Long processId) {
 		Optional<ProductImportSheetLogORM> optional = productImportSheetLogRepository.findById(processId);
 		ProductImportSheetLogORM productImportSheetLogORM = optional.get();
 		productImportSheetLogORM.setStatus(ProductSheetProcessStatus.PROCESSED_SUCCESS);
@@ -42,7 +42,7 @@ public class ProductImportSheetLogService {
 		productImportSheetLogRepository.save(productImportSheetLogORM);
 	}
 	
-	public void updateStatusError(Long processId, String errorMessage) {
+	public void updateLogStatusError(Long processId, String errorMessage) {
 		Optional<ProductImportSheetLogORM> optional = productImportSheetLogRepository.findById(processId);
 		ProductImportSheetLogORM productImportSheetLogORM = optional.get();
 		productImportSheetLogORM.setStatus(ProductSheetProcessStatus.PROCESSED_ERROR);
@@ -51,7 +51,7 @@ public class ProductImportSheetLogService {
 		productImportSheetLogRepository.save(productImportSheetLogORM);
 	}
 	
-	public ProductImportSheetLogORM getById(Long id) {
+	public ProductImportSheetLogORM getLogById(Long id) {
 		Optional<ProductImportSheetLogORM> optional = productImportSheetLogRepository.findById(id);
 		if(optional.isPresent()) {
 			return optional.get();
