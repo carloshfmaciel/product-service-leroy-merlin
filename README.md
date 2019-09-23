@@ -31,7 +31,7 @@ Linkedin: https://www.linkedin.com/in/carlos-maciel-64796117<br>
 
 ## Testes unitários
 
-- Testes unitários realizados apenas sobre os métodos que continham algum lógica condicional(IF).
+- Testes unitários realizados apenas sobre os métodos que continham alguma lógica condicional(IF).
 - Nomes do métodos escritos no Padrão BDD (Given/When/Then)
 - Tecnologias utilizadas(Junit e Mockito)
 
