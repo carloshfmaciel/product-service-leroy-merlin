@@ -92,4 +92,34 @@ http://localhost:8080/swagger-ui.html
 
 # Atualizando produto
 
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_14.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_15.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_16.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_17.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_18.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_19.PNG)
+
 # Deletando produto
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_20.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_21.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_22.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_23.PNG)
+
+# Acessando o banco de dados
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_24.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_25.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_26.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_27.PNG)
