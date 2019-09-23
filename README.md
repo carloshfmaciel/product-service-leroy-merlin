@@ -46,19 +46,49 @@ git clone https://github.com/carloshfmaciel/product-service-leroy-merlin.git
 ```java
 java -jar product-service-1.0.0-SNAPSHOT.jar
 ```
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/start_app.PNG)
+
 # Accessando o Swagger
 
 - Abra um browser e na barra de endereços, digite:
 
 http://localhost:8080/swagger-ui.html
 
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger.PNG)
+
 # Importando a planilha de Produtos
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_01.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_02.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_03.PNG)
 
 # Consultando o log de processamento da planilhada
 
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_04.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_05.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_06.PNG)
+
 # Consultando todos os produtos cadastrados
 
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_07.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_09.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_10.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_10.PNG)
+
 # Consultando produto pelo id
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_11.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_12.PNG)
+
+![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_13.PNG)
 
 # Atualizando produto
 
