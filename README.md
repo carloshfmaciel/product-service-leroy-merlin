@@ -58,9 +58,15 @@ http://localhost:8080/swagger-ui.html
 
 # Importando a planilha de Produtos
 
+1 - Expando o endpoint abaixo e clique no ***Try it out***
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_01.PNG)
 
+2 - Clique no botão ***Escolher arquivo*** e selecione o arquivo ***java leroy.xlsx***, que está no diretório ***arquivos*** do projeto e clique no botão ***Executar***.
+
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_02.PNG)
+
+3 - A API devolverá uma resposta com HTTP Status 200 e no corpo o id do processamento assíncrono com uma mensagem de sucesso.
 
 ![image](https://github.com/carloshfmaciel/product-service-leroy-merlin/blob/master/screenshots/swagger_03.PNG)
 
