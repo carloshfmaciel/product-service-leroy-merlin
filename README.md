@@ -1,4 +1,4 @@
-# Exemplo de Aplicação - Leroy Merlin
+# Aplicação Cadastro de Produtos - Leroy Merlin
 
 Autor: Carlos Maciel<br>
 Email: carloshfmaciel@gmail.com<br>
