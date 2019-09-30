@@ -6,7 +6,7 @@ Linkedin: https://www.linkedin.com/in/carlos-maciel-64796117<br>
 
 ## A Aplicação fornece as seguintes funcionalidades:
 - Cadastro de Produtos via planilha excel(xlsx) - Assíncrono via fila
-- CRUD dos Produtos
+- CRUD de Produtos via API Rest
 - Log de status do processamento assíncrono da planilha
 - Interface Gráfica para consumo das apis (Swagger)
 - Interface Gráfica para consulta direta ao banco de dados (H2)
