@@ -2,7 +2,7 @@
 
 Autor: Carlos Maciel<br>
 Email: carloshfmaciel@gmail.com<br>
-Linkedin: https://www.linkedin.com/in/carlos-maciel-64796117<br>
+Linkedin: https://www.linkedin.com/in/carloshfmaciel<br>
 
 ## A Aplicação fornece as seguintes funcionalidades:
 - Cadastro de Produtos via planilha excel(xlsx) - Assíncrono via fila
